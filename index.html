@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Cabeçalho -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tarefas a Fazer</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        
+
+        <!-- Painel de tarefas -->
+        <section class="task-panel" aria-labelledby="task-panel-title">
+
+            <!-- Título -->
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        Minha lista
+                    </p>
+
+                    <h2 id="task-panel-title">
+                        O que precisa ser feito?
+                    </h2>
+
+                </div>
+
+                <span class="task-count" id="task-count">
+                    0 tarefas
+                </span>
+
+            </div>
+
+            <!-- Formulário para adicionar tarefa -->
+            <form class="task-form">
+
+                <label class="sr-only" for="new-task">
+                    Digite uma nova tarefa
+                </label>
+
+                <input
+                    id="new-task"
+                    type="text"
+                    placeholder="Adicionar uma nova tarefa..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Adicionar
+                </button>
+
+            </form>
+
+            <!-- Filtros -->
+            <nav class="task-filters" aria-label="Filtrar tarefas">
+
+                <button
+                    class="filter-button active"
+                    type="button"
+                    data-filter="all"
+                >
+                    Todas
+                </button>
+
+                <button
+                    class="filter-button"
+                    type="button"
+                    data-filter="pending"
+                >
+                    Pendentes
+                </button>
+
+                <button
+                    class="filter-button"
+                    type="button"
+                    data-filter="completed"
+                >
+                    Concluídas
+                </button>
+
+            </nav>
+
+            <!-- Lista onde as tarefas serão adicionadas -->
+            <ul
+                class="task-list"
+                id="task-list"
+            >
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
